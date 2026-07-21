@@ -1,0 +1,78 @@
+[
+  {
+    "method": "post",
+    "url": "https://apisandbox.facturama.mx/api-lite/3/cfdis",
+    "headers": {
+      "User-Agent": "this is a test",
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "auth": "Basic abc",
+    "json": {
+      "CfdiType": "I",
+      "ExpeditionPlace": "27200",
+      "Issuer": {
+        "Rfc": "XIQB891116QE4",
+        "Name": "BERENICE XIMO QUEZADA",
+        "FiscalRegime": "601"
+      },
+      "Receiver": {
+        "Rfc": "URE180429TM6",
+        "Name": "UNIVERSIDAD ROBOTICA ESPAÑOLA",
+        "CfdiUse": "G03",
+        "FiscalRegime": "601",
+        "TaxZipCode": "65000"
+      },
+      "Items": [
+        {
+          "ProductCode": "10101702",
+          "Description": "SERVICIOS DE RENTA",
+          "UnitCode": "E48",
+          "Quantity": 1.0,
+          "UnitPrice": 100.0,
+          "Subtotal": 100.0,
+          "TaxObject": "02",
+          "Taxes": [
+            {
+              "Name": "IVA",
+              "IsRetention": false,
+              "Base": 100.0,
+              "Total": 16.0,
+              "Rate": 0.16,
+              "IsQuota": false
+            },
+            {
+              "Name": "ISR",
+              "IsRetention": true,
+              "Base": 100.0,
+              "Total": 10.0,
+              "Rate": 0.1,
+              "IsQuota": false
+            }
+          ],
+          "Total": 106.0
+        }
+      ],
+      "Date": "2022-09-28 22:40:38",
+      "Serie": "T",
+      "Folio": "1000",
+      "PaymentForm": "99",
+      "PaymentMethod": "PPD",
+      "Currency": "MXN",
+      "Exportation": "01"
+    },
+    "params": null
+  },
+  {
+    "method": "get",
+    "url": "https://apisandbox.facturama.mx/api/Cfdi/xml/issuedLite/abc123",
+    "headers": {
+      "User-Agent": "this is a test",
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "auth": "Basic abc",
+    "json": null,
+    "params": null
+  }
+]
